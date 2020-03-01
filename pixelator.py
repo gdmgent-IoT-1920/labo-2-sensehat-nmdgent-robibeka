@@ -9,7 +9,7 @@ rows = 8
 cols = 8
 
 def set_random_color():
-    return [randint(0,256), randint(0,256), randint(0,256)]
+    return [randint(0,255), randint(0,255), randint(0,255)]
 
 def main():
     while True:

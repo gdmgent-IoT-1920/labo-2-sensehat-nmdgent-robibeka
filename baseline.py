@@ -6,7 +6,7 @@ import sys
 sense = SenseHat()
 
 def set_random_color():
-    return [randint(0,256), randint(0,256), randint(0,256)]
+    return [randint(0, 255), randint(0, 255), randint(0, 255)]
 
 def set_back_color():
     color = set_random_color()
@@ -16,7 +16,7 @@ def set_back_color():
 def main():
     while True:
         sense.show_message("Hello! We are New Media Development :)", text_colour=set_random_color(), back_colour=set_back_color())
-    
+
 try:
     main()
 except (KeyboardInterrupt, SystemExit):
