@@ -5,6 +5,8 @@ import sys
 
 sense = SenseHat()
 
+letters = ["N", "M", "D"]
+
 def set_random_color():
     randomRed = randint(0,256)
     randomGreen = randint(0,256)
@@ -13,12 +15,9 @@ def set_random_color():
 
 def main():
     while True:
-        sense.show_letter("N", set_random_color())
-        sleep(1)
-        sense.show_letter("M", set_random_color())
-        sleep(1)
-        sense.show_letter("D", set_random_color())
-        sleep(1)
+        for letter in letters:
+            sense.show_letter(letter, set_random_color())
+            sleep(1)
         sense.clear()
         sleep(3)
     
