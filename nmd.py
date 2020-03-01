@@ -8,10 +8,7 @@ sense = SenseHat()
 letters = ["N", "M", "D"]
 
 def set_random_color():
-    randomRed = randint(0,256)
-    randomGreen = randint(0,256)
-    randomBlue = randint(0,256)
-    return [randomRed, randomGreen, randomBlue]
+    return [randint(0,256), randint(0,256), randint(0,256)]
 
 def main():
     while True:
