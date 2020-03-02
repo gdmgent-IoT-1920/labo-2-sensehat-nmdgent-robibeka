@@ -5,18 +5,20 @@ import sys
 
 sense = SenseHat()
 
-letters = ["N", "M", "D"]
-
 def set_random_color():
     return [randint(0,255), randint(0,255), randint(0,255)]
 
 def main():
+    letters = input("Enter your text: ")
+    intervalBetween = int(input("How long do you want each letter to show? "))
+    intervalAfter = int(input("How long do you want to wait after the last letter? "))
+
     while True:
         for letter in letters:
             sense.show_letter(letter, set_random_color())
-            sleep(1)
+            sleep(intervalBetween)
         sense.clear()
-        sleep(3)
+        sleep(intervalAfter)
     
 try:
     main()
