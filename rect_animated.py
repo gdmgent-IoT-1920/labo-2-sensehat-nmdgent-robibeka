@@ -4,8 +4,11 @@ import sys
 
 sense = SenseHat()
 
+def set_random_color():
+    return [randint(0,255), randint(0,255), randint(0,255)]
+
 o = (0, 0, 0)
-x = (0, 255, 0)
+x = (set_random_color())
 
 rect1 = [
 o,o,o,o,o,o,o,o,
