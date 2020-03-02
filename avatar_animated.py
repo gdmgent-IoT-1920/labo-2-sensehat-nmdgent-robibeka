@@ -5,12 +5,13 @@ import sys
 
 sense = SenseHat()
 
-avatars = ["./images/avatar1.png", "./images/avatar2.png", "./images/avatar3.png"]
-
 def main():
+    avatars = ["./images/avatar1.png", "./images/avatar2.png", "./images/avatar3.png"]
+    interval = float(input("How much time do you want between each avatar? "))
+
     while True:
         sense.load_image(avatars[randint(0,2)])
-        sleep(2)
+        sleep(interval)
         sense.clear()
 
 try:
